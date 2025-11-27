@@ -62,7 +62,7 @@ export default function TodoApp() {
           />
           <button
             onClick={addTodo}
-            className="px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-xl hover:from-orange-500 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-transparent transition-all transform hover:scale-105 font-medium shadow-lg"
+            className="px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-xl hover:from-blue-500 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent transition-all transform hover:scale-105 font-medium shadow-lg"
           >
             Add
           </button>
@@ -87,7 +87,7 @@ export default function TodoApp() {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
-                  className="w-5 h-5 text-orange-500 bg-white/20 border-white/30 rounded-md focus:ring-orange-400 focus:ring-2"
+                  className="w-5 h-5 text-blue-500 bg-white/20 border-white/30 rounded-md focus:ring-blue-400 focus:ring-2"
                 />
                 <span
                   className={`flex-1 text-lg ${
@@ -122,7 +122,7 @@ export default function TodoApp() {
                 <div className="text-white/60 text-sm">Done</div>
               </div>
               <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl font-bold text-orange-300">{todos.filter(t => !t.completed).length}</div>
+                <div className="text-2xl font-bold text-blue-300">{todos.filter(t => !t.completed).length}</div>
                 <div className="text-white/60 text-sm">Left</div>
               </div>
             </div>
@@ -132,6 +132,9 @@ export default function TodoApp() {
     </div>
   );
 }
+
+
+
 
 
 

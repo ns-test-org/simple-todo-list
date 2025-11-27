@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(-45deg, #ff6b35, #ff8c42, #ffa726, #ffb74d, #ff7043, #ff5722);
+  background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #60a5fa, #93c5fd, #2563eb, #1d4ed8);
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
   color: var(--foreground);
@@ -162,4 +162,5 @@ body {
 .animate-bounce-horizontal {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
+
 
