@@ -26,9 +26,24 @@ html, body {
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(-45deg, #ff6b35, #ff8c42, #ffa726, #ffb74d, #ff7043, #ff5722);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Enhanced animated aurora gradient layers - 25% more intense */
@@ -147,3 +162,4 @@ body {
 .animate-bounce-horizontal {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
+
