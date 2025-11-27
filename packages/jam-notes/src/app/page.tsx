@@ -42,7 +42,7 @@ export default function TodoApp() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-4">
-      <div className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8">
+      <div className="w-full max-w-lg bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-700/50 p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">
             ✨ Todo List
@@ -58,11 +58,11 @@ export default function TodoApp() {
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="What needs to be done?"
-            className="flex-1 px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all"
+            className="flex-1 px-4 py-3 bg-slate-800/60 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white placeholder-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all"
           />
           <button
             onClick={addTodo}
-            className="px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-xl hover:from-blue-500 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent transition-all transform hover:scale-105 font-medium shadow-lg"
+            className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-transparent transition-all transform hover:scale-105 font-medium shadow-lg"
           >
             Add
           </button>
@@ -81,13 +81,13 @@ export default function TodoApp() {
             todos.map(todo => (
               <div
                 key={todo.id}
-                className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl hover:bg-white/20 transition-all transform hover:scale-[1.02] group"
+                className="flex items-center gap-4 p-4 bg-slate-800/40 backdrop-blur-sm border border-slate-600/30 rounded-xl hover:bg-slate-700/50 transition-all transform hover:scale-[1.02] group"
               >
                 <input
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
-                  className="w-5 h-5 text-blue-500 bg-white/20 border-white/30 rounded-md focus:ring-blue-400 focus:ring-2"
+                  className="w-5 h-5 text-orange-500 bg-slate-700/50 border-slate-500 rounded-md focus:ring-orange-400 focus:ring-2"
                 />
                 <span
                   className={`flex-1 text-lg ${
@@ -111,19 +111,19 @@ export default function TodoApp() {
 
         {/* Stats */}
         {todos.length > 0 && (
-          <div className="pt-6 border-t border-white/20">
+          <div className="pt-6 border-t border-slate-600/30">
             <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="bg-white/10 rounded-lg p-3">
+              <div className="bg-slate-800/40 rounded-lg p-3">
                 <div className="text-2xl font-bold text-white">{todos.length}</div>
-                <div className="text-white/60 text-sm">Total</div>
+                <div className="text-slate-300 text-sm">Total</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl font-bold text-green-300">{todos.filter(t => t.completed).length}</div>
-                <div className="text-white/60 text-sm">Done</div>
+              <div className="bg-slate-800/40 rounded-lg p-3">
+                <div className="text-2xl font-bold text-green-400">{todos.filter(t => t.completed).length}</div>
+                <div className="text-slate-300 text-sm">Done</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="text-2xl font-bold text-blue-300">{todos.filter(t => !t.completed).length}</div>
-                <div className="text-white/60 text-sm">Left</div>
+              <div className="bg-slate-800/40 rounded-lg p-3">
+                <div className="text-2xl font-bold text-orange-400">{todos.filter(t => !t.completed).length}</div>
+                <div className="text-slate-300 text-sm">Left</div>
               </div>
             </div>
           </div>
@@ -132,6 +132,13 @@ export default function TodoApp() {
     </div>
   );
 }
+
+
+
+
+
+
+
 
 
 
