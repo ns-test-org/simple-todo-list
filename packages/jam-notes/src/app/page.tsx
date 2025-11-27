@@ -41,62 +41,68 @@ export default function TodoApp() {
   };
 
   return (
-    <div className="min-h-screen py-8 px-4">
-      <div className="max-w-md mx-auto bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-6">
-        <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">
-          Simple Todo List
-        </h1>
+    <div className="min-h-screen flex items-center justify-center py-8 px-4">
+      <div className="w-full max-w-lg mx-auto bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-white mb-2">
+            ✨ Todo List
+          </h1>
+          <p className="text-white/70 text-sm">Stay organized and productive</p>
+        </div>
         
         {/* Add todo input */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex gap-3 mb-8">
           <input
             type="text"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Add a new task..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="What needs to be done?"
+            className="flex-1 px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all"
           />
           <button
             onClick={addTodo}
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+            className="px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-xl hover:from-orange-500 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-transparent transition-all transform hover:scale-105 font-medium shadow-lg"
           >
             Add
           </button>
         </div>
 
         {/* Todo list */}
-        <div className="space-y-2">
+        <div className="space-y-3 mb-6">
           {todos.length === 0 ? (
-            <p className="text-gray-500 text-center py-4">
-              No tasks yet. Add one above!
-            </p>
+            <div className="text-center py-12">
+              <div className="text-6xl mb-4">📝</div>
+              <p className="text-white/60 text-lg">
+                No tasks yet. Add your first task above!
+              </p>
+            </div>
           ) : (
             todos.map(todo => (
               <div
                 key={todo.id}
-                className="flex items-center gap-3 p-3 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
+                className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl hover:bg-white/20 transition-all transform hover:scale-[1.02] group"
               >
                 <input
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
-                  className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                  className="w-5 h-5 text-orange-500 bg-white/20 border-white/30 rounded-md focus:ring-orange-400 focus:ring-2"
                 />
                 <span
-                  className={`flex-1 ${
+                  className={`flex-1 text-lg ${
                     todo.completed
-                      ? 'text-gray-500 line-through'
-                      : 'text-gray-800'
-                  }`}
+                      ? 'text-white/50 line-through'
+                      : 'text-white'
+                  } transition-all`}
                 >
                   {todo.text}
                 </span>
                 <button
                   onClick={() => deleteTodo(todo.id)}
-                  className="px-2 py-1 text-red-500 hover:text-red-700 hover:bg-red-50 rounded transition-colors"
+                  className="px-3 py-2 text-red-300 hover:text-red-100 hover:bg-red-500/20 rounded-lg transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0"
                 >
-                  Delete
+                  🗑️
                 </button>
               </div>
             ))
@@ -105,11 +111,20 @@ export default function TodoApp() {
 
         {/* Stats */}
         {todos.length > 0 && (
-          <div className="mt-6 pt-4 border-t border-gray-200">
-            <div className="flex justify-between text-sm text-gray-600">
-              <span>Total: {todos.length}</span>
-              <span>Completed: {todos.filter(t => t.completed).length}</span>
-              <span>Remaining: {todos.filter(t => !t.completed).length}</span>
+          <div className="pt-6 border-t border-white/20">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white/10 rounded-lg p-3">
+                <div className="text-2xl font-bold text-white">{todos.length}</div>
+                <div className="text-white/60 text-sm">Total</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <div className="text-2xl font-bold text-green-300">{todos.filter(t => t.completed).length}</div>
+                <div className="text-white/60 text-sm">Done</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-3">
+                <div className="text-2xl font-bold text-orange-300">{todos.filter(t => !t.completed).length}</div>
+                <div className="text-white/60 text-sm">Left</div>
+              </div>
             </div>
           </div>
         )}
@@ -117,6 +132,7 @@ export default function TodoApp() {
     </div>
   );
 }
+
 
 
 
