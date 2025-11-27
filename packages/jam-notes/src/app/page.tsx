@@ -41,7 +41,7 @@ export default function TodoApp() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-lg bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border-2 border-white/50 ring-8 ring-white/20 p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
@@ -129,9 +129,26 @@ export default function TodoApp() {
           </div>
         )}
       </div>
+      
+      {/* Footer */}
+      <div className="mt-8 text-center">
+        <p className="text-white/80 text-sm font-medium">
+          Built with ❤️ by{' '}
+          <a 
+            href="https://nullshot.ai" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white hover:text-white/90 underline decoration-white/50 hover:decoration-white transition-all"
+          >
+            nullshot.ai
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
+
+
 
 
 
