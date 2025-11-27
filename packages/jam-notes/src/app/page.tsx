@@ -41,8 +41,8 @@ export default function TodoApp() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-8 px-4">
-      <div className="w-full max-w-lg mx-auto bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8">
+    <div className="min-h-screen w-full flex items-center justify-center p-4">
+      <div className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">
             ✨ Todo List
@@ -132,6 +132,7 @@ export default function TodoApp() {
     </div>
   );
 }
+
 
 
 
