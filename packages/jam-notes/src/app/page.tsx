@@ -135,18 +135,19 @@ export default function TodoApp() {
         <p className="text-white/80 text-sm font-medium">
           BUILT WITH GREAT ❤️ BY{' '}
           <a 
-            href="https://nullshot.ai" 
+            href="https://xavalabs.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white hover:text-white/90 underline decoration-white/50 hover:decoration-white transition-all"
           >
-            nullshot.ai
+            XAVALABS
           </a>
         </p>
       </div>
     </div>
   );
 }
+
 
 
 
