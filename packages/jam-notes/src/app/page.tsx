@@ -133,7 +133,7 @@ export default function TodoApp() {
       {/* Footer */}
       <div className="mt-8 text-center">
         <p className="text-white/80 text-sm font-medium">
-          Built with great ❤️ by{' '}
+          BUILT WITH GREAT ❤️ BY{' '}
           <a 
             href="https://nullshot.ai" 
             target="_blank" 
@@ -147,6 +147,7 @@ export default function TodoApp() {
     </div>
   );
 }
+
 
 
 
