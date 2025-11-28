@@ -133,20 +133,22 @@ export default function TodoApp() {
       {/* Footer */}
       <div className="mt-8 text-center">
         <p className="text-white/80 text-sm font-medium">
-          BUILT WITH ❤️ BY{' '}
+          Built with ❤️ by{' '}
           <a 
             href="https://xavalabs.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white hover:text-white/90 underline decoration-white/50 hover:decoration-white transition-all"
           >
-            XAVALABS
+            xavalabs
           </a>
         </p>
       </div>
     </div>
   );
 }
+
+
 
 
 
