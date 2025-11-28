@@ -45,7 +45,7 @@ export default function TodoApp() {
       <div className="w-full max-w-lg bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border-2 border-white/50 ring-8 ring-white/20 p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
-            📝 Coops Todos
+            📝 Todo List
           </h1>
           <p className="text-gray-600 text-lg font-medium">Stay organized and productive</p>
         </div>
@@ -147,6 +147,7 @@ export default function TodoApp() {
     </div>
   );
 }
+
 
 
 
